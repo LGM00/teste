@@ -1,0 +1,16 @@
+* {
+    margin-top: 10px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .exercicios {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

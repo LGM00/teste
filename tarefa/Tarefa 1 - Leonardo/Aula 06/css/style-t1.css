@@ -1,0 +1,26 @@
+.tabuleiro {
+    margin: 25px 25px 25px 25px;
+    width: 400px;
+    height: 400px;
+    border: 10px double black;    
+}
+
+.tabuleiro > white{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+}
+
+.tabuleiro > black{ 
+    width: 50px;
+    height: 50px;
+    background-color: black;
+
+}
+
+.tabuleiro > cols{ 
+    width: 50px;
+    height: 400px;
+    float: left;
+}

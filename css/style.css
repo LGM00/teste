@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    
+  }
+
+  main {
+    min-height: 1200px;
+  }
+
+  main > h1 {
+    text-align: center;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #27263D;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .site-name {
+    text-decoration: none;
+    color: #DEE1F8;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  nav ul li {
+    cursor: pointer;
+  }
+
+  nav ul li:hover {
+    background-color: #3A395B;
+    color: #DEE1F8;
+  }
+  
+  nav ul li:hover > .sub-menu {
+    display: block;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #DEE1F8;
+    padding: 5px;
+  }
+  
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #27263D;
+    padding: 10px;
+  }
+
+  .sub-menu.times-menu{
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  .column {
+    flex-basis: 50%;
+  }
+  
+  .sub-menu li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  nav li:hover .sub-menu {
+    display: block;
+  }
+  
+  .sub-menu li {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .sub-menu img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .empty-div {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    height: 0;
+  }
+
+main div {
+    margin-left: 16px;
+  }
+
+main div p{
+    margin-top: 16px;
+}
+
+.next-matches{
+    margin-top: 16px;
+    text-align: left;
+}
+
+.subtitle {
+  margin-top: 16px;
+  margin-left: 48px;
+}
+
+.news-content {
+  padding-bottom: 8px;
+  margin-top: 6px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0px;
+    align-items: flex-start;
+  }
+
+.game-result {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.score {
+  display: flex;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.score-cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  font-size: 12px;
+}
+
+.team-home{
+  margin-left: 16px;
+}
+
+.team-home,
+.team-away {
+  display: flex;
+  align-items: center;
+}
+
+.team-away{
+  margin-left: 0px;
+}
+
+.team-away div {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.team-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+
+.news-title {
+  margin-top: 4px;
+}
+
+.news-title a {
+  text-decoration: none;
+  color: #27263D;
+}
+
+.news-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-image {
+  margin-right: 20px;
+}
+
+.news-image img {
+  width: 396px;
+  height: 222px;
+}
+
+.news-content, .news-content > div {
+  margin-left: 0px;
+}
+
+.news-summary {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #555;
+  text-align: left;
+}
+
+.separator::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: lightgray;
+  margin-top: 32px;
+}
+
+.separator {
+  margin-top: 32px;
+  height: 1px;
+  background-color: #CCCCCC;
+}
+
+footer {
+  background-color: #27263D;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: #777;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-container > div > h3 {
+  color: #9C99BD;
+}
+
+
+.footer-container > div > p {
+  color: #DEE1F8;
+}
+
+.team-page {
+  text-align: center;
+}
+
+.team-summary {
+  float: left;
+  width: 50%;
+  margin: 0 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#biografia{
+  margin-bottom: 20px;
+}
+
+.proximos-jogos {
+  float: right;
+  width: 40%;
+  padding-left: 15%;
+  text-align: left;
+}
+
+.jogo-legenda{
+  text-align: center;
+  font-size: 12px;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.lista-jogadores {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.lista-jogadores li {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista-jogadores img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.lista-jogadores span {
+  display: block;
+  margin-top: 10px;
+}
+
+.jogadores{
+    margin-top: 150px;   
+    margin-left: 20px;
+    width: 100%; /* Ajuste a largura conforme necessário */
+}
+
+.jogadores > h3 {
+  margin-bottom: 16px;
+}
+
+.team-menu > nav > ul > li > a {
+  color:#27263D;
+}

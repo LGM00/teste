@@ -1,0 +1,153 @@
+<!-- Leonardo Gutierrez Mamani      RM: 190418 
+     Tarefa 04 - Exercícios
+     PWEB I                                   -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/tarefa04.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Exercícios</h1>
+
+    <div class="exercicios">
+      <h2>Exercício 1: Média dos Dois Maiores Números</h2>
+      <form>
+        <label for="numero1">Número 1:</label>
+        <input type="number" id="numero1" />
+
+        <label for="numero2">Número 2:</label>
+        <input type="number" id="numero2" />
+
+        <label for="numero3">Número 3:</label>
+        <input type="number" id="numero3" />
+
+        <button type="button" onclick="calcularMedia()">Calcular Média</button>
+      </form>
+
+      <div id="resultado-media"></div>
+    </div>
+
+    <div class="exercicios">
+      <h2>Exercício 2: Verificação de Nota Válida</h2>
+      <form>
+        <label for="nota">Nota:</label>
+        <input type="number" step="0.01" id="nota" />
+
+        <button type="button" onclick="verificarNota()">Verificar Nota</button>
+      </form>
+
+      <div id="resultado-nota"></div>
+    </div>
+
+    <div class="exercicios">
+      <h2>Exercício 3: Cálculo do Peso Ideal</h2>
+      <form>
+        <label for="altura">Altura:</label>
+        <input type="number" step="0.01" id="altura" />
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo">
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+        </select>
+
+        <button type="button" onclick="calcularPesoIdeal()">
+          Calcular Peso Ideal
+        </button>
+      </form>
+
+      <div id="resultado-peso"></div>
+    </div>
+
+    <div class="exercicios">
+      <h2>Exercício 4: Reajuste Salarial</h2>
+      <form>
+        <label for="salario">Salário do colaborador:</label>
+        <input type="number" step="0.01" id="salario" />
+
+        <button type="button" onclick="calcularReajuste()">
+          Calcular Reajuste
+        </button>
+      </form>
+
+      <div id="resultado-reajuste"></div>
+    </div>
+
+    <script>
+      function calcularMedia() {
+        var numero1 = parseInt(document.getElementById("numero1").value);
+        var numero2 = parseInt(document.getElementById("numero2").value);
+        var numero3 = parseInt(document.getElementById("numero3").value);
+
+        var maiorNumero = Math.max(numero1, numero2, numero3);
+        var menorNumero = Math.min(numero1, numero2, numero3);
+
+        var media = (numero1 + numero2 + numero3 - menorNumero) / 2;
+
+        document.getElementById("resultado-media").textContent =
+          "A média dos dois maiores números é: " + media;
+      }
+
+      function verificarNota() {
+        var nota = parseFloat(document.getElementById("nota").value);
+
+        if (nota >= 0 && nota <= 10) {
+          document.getElementById("resultado-nota").textContent = "Nota válida";
+        } else {
+          document.getElementById("resultado-nota").textContent =
+            "Nota inválida";
+        }
+      }
+
+      function calcularPesoIdeal() {
+        var altura = parseFloat(document.getElementById("altura").value);
+        var sexo = document.getElementById("sexo").value;
+        var pesoIdeal = 0;
+
+        if (sexo === "M") {
+          pesoIdeal = 72.7 * altura - 58;
+        } else if (sexo === "F") {
+          pesoIdeal = 62.1 * altura - 44.7;
+        }
+
+        document.getElementById("resultado-peso").textContent =
+          "O peso ideal é: " + pesoIdeal.toFixed(2);
+      }
+
+      function calcularReajuste() {
+        var salario = parseFloat(document.getElementById("salario").value);
+        var percentual = 0;
+        var aumento = 0;
+        var novoSalario = 0;
+
+        if (salario <= 280) {
+          percentual = 20;
+        } else if (salario > 280 && salario <= 700) {
+          percentual = 15;
+        } else if (salario > 700 && salario <= 1500) {
+          percentual = 10;
+        } else {
+          percentual = 5;
+        }
+
+        aumento = (salario * percentual) / 100;
+        novoSalario = salario + aumento;
+
+        document.getElementById("resultado-reajuste").innerHTML =
+          "Salário antes do reajuste: R$ " +
+          salario.toFixed(2) +
+          "<br>" +
+          "Percentual de aumento aplicado: " +
+          percentual +
+          "%<br>" +
+          "Valor do aumento: R$ " +
+          aumento.toFixed(2) +
+          "<br>" +
+          "Novo salário após o aumento: R$ " +
+          novoSalario.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
